@@ -217,11 +217,12 @@ ampy.exe -p COM3 ls
 
 ##### 3、使用RT-Thread MicroPython扩展
 
-​     看了几个方法之后，感觉这个扩展最简单，所以直接安装试试。安装完毕之后，就能在VS Code底下状态栏左侧看到一个插头样式的图标，点击图标就可以选择连接端口。我的ESP32板子通过USB连接在COM3上，所以选择COM3。![image-20221003121726492](ESP32-2：从VS Code分发MicroPython代码.assets/image-20221003121726492.png)
+​     看了几个方法之后，感觉这个扩展最简单，所以直接安装试试。安装完毕之后，就能在VS Code底下状态栏左侧看到一个插头样式的图标，点击图标就可以选择连接端口。我的ESP32板子通过USB连接在COM3上，所以选择COM3。
+![image-20221003121726492](../assets/image-20221003121726492.png)
 
 ​    这时候扩展会在PowerShell终端运行自己的脚本初始化，然后连接到ESP32的REPL上。所以VS Code需要使用PowerShell作为默认终端类型，保证成功运行初始化。
 
-![image-20221003121938145](ESP32-2：从VS Code分发MicroPython代码.assets/image-20221003121938145.png)
+![image-20221003121938145](../assets/image-20221003121938145.png)
 
 ​    我首先修改了板子启动时会运行的 boot.py 程序。
 
@@ -235,11 +236,11 @@ ap_if.active(True)
 
 ​    这段代码将会把ESP32板子启动到AP模式。保存后右键点击 boot.py 然后选择“下载该文件/文件夹到设备上”。
 
-![image-20221003122203725](ESP32-2：从VS Code分发MicroPython代码.assets/image-20221003122203725.png)
+![image-20221003122203725](../assets/image-20221003122203725.png)
 
 ​    然后可以在COM3终端里按下 Ctrl+D 软重置ESP32板子，马上就能够在无线网络中看到这个AP的信号。
 
-<img src="ESP32-2：从VS Code分发MicroPython代码.assets/image-20221003122302587.png" alt="image-20221003122302587" style="zoom:50%;" />
+<img src="../assets/image-20221003122302587.png" alt="image-20221003122302587" style="zoom:50%;" />
 
 ​    接下来写一段非常简单的代码。仔细看了下这块ESP32板子，板载了一颗贴片LED。因为没有任何引脚说明，只能自己看线路了。看着LED是连在 Pin 22 上的，于是就按照这个写几句让LED闪烁吧。 
 
