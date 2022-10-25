@@ -259,7 +259,7 @@ gc.collect()
 
 ​    差点忘了交代一下怎么确认ESP32上的MicroPython发送了消息到Azure云上的IoT Hub。使用VS Code的IoT Hub扩展可以连接到终结点看D2C消息，也可以使用Azure IoT Explorer直接选择遥测查看。
 
-![image-20221017203436494](ESP32-6：更加稳定的MQTT和数据构造.assets/image-20221017203436494.png)
+![image-20221017203436494](../main/assets/image-20221017203436494.png)
 
 ​    实际折腾中发现umqtt的发送经常报“OSError: -104"错误，要么是因为家里WiFi太烂了…（电信路由的烂wifi，刷剧经常会卡）…要么是因为IoT Hub在”外面“会被”Reset“…或者参考更加韧性的代码试试…
 

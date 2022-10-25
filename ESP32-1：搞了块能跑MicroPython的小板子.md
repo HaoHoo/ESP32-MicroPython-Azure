@@ -223,10 +223,10 @@ Started webrepl in manual override mode
 
 ​    启动WebREPL可以加上密码。可以看到，WebREPL的守护进程已经在192.168.4.1的8266端口侦听了。那么怎么连接到这个端口呢？直接使用浏览器是不行的，因为WebREPL使用的不是HTTP协议，而是Web Socket，所以要找个小工具：webrepl_cli。这个工具可以在：https://github.com/micropython/webrepl 获得。下载代码包之后解压，直接用浏览器打开webrepl.html即可。
 
-![image-20221001220538178](https://github.com/HaoHoo/ESP32-MicroPython-Azure/blob/main/assets/image-20221001220538178.png)
+![image-20221001220538178](../main/assets/image-20221001220538178.png)
 
 ​    在页面的地址栏输入地址和端口，点击连接，即可连到ESP32的板载MicroPython。甚至可以通过这个工具页面上传下载文件，例如下图，下载了启动时默认运行的boot.py程序文件。
 
-![image-20221001220651458](https://github.com/HaoHoo/ESP32-MicroPython-Azure/blob/main/assets/image-20221001220651458.png)
+![image-20221001220651458](../main/assets/image-20221001220651458.png)
 
 ​    好了，先折腾到这里，板子准备好了，等空了接着折腾。
