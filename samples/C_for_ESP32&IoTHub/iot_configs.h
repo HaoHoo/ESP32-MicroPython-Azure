@@ -66,11 +66,13 @@
 
 // Azure IoT
 #define IOT_CONFIG_IOTHUB_FQDN "{IoTHubName}.azure-devices.net"
-#define IOT_CONFIG_DEVICE_ID "IoTDeviceName"
+#define IOT_CONFIG_DEVICE_ID "{IoTDeviceName}"
 // Use device key if not using certificates
 #ifndef IOT_CONFIG_USE_X509_CERT
   #define IOT_CONFIG_DEVICE_KEY "{IoTDeviceKey}"
 #endif  // IOT_CONFIG_USE_X509_CERT
+
+// Replace strings in {} by your own URL, Device ID and Device Key 
 
 // Publish 1 message every 2 seconds
 #define TELEMETRY_FREQUENCY_MILLISECS 2000
