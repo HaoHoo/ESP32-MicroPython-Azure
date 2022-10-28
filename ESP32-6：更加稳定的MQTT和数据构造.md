@@ -156,7 +156,7 @@ def new(key, msg = None, digestmod = None):
     
 ```
 
-​    接下来是MQTT模块的替换，要从之前用的paho.mqtt，替换成MicroPython自带的umqtt.simple。一开始我很担心ssl模块的替换，查了一下貌似ussl和ssl不大能直接换。后来发现umqtt很“simple”，因为没有涉及到客户端证书，所以直接给参数“ssl=Ture”就可以了。
+​    接下来是MQTT模块的替换，要从之前用的paho.mqtt，替换成MicroPython自带的umqtt.simple。一开始我很担心ssl模块的替换，查了一下貌似ussl和ssl不大能直接换。后来发现umqtt很“simple”，因为我们的实验没有涉及到客户端证书，所以直接给参数“ssl=Ture”就可以了。
 
 ```python
 import sys
